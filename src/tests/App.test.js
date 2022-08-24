@@ -31,7 +31,7 @@ describe('Testando App', () => {
     expect(history.location.pathname).toBe('/');
   });
 
-  test('Testa se a aplicação é redirecionada para About', () => {
+  it('Testa se a aplicação é redirecionada para About', () => {
     // acessar
     const { history } = renderWithRouter(<App />);
     const about = screen.getByRole('link', { name: 'About' });
@@ -44,7 +44,7 @@ describe('Testando App', () => {
     expect(history.location.pathname).toBe('/about');
   });
 
-  test('Testa se a aplicação é redirecionada para Favoritos', () => {
+  it('Testa se a aplicação é redirecionada para Favoritos', () => {
     const { history } = renderWithRouter(<App />);
     const favorites = screen.getByRole('link', { name: 'Favorite Pokémons' });
 
@@ -56,7 +56,7 @@ describe('Testando App', () => {
     expect(history.location.pathname).toBe('/favorites');
   });
 
-  test('Testa se a aplicação é redirecionada para Not Found', () => {
+  it('Testa se a aplicação é redirecionada para Not Found', () => {
     // acessar
     const { history } = renderWithRouter(<App />);
 
